@@ -126,7 +126,7 @@ router.post('/', async (req, res) => {
             res.json(result);
         }
     }
-    catch (error) {
+    catch (err) {
         if (err?.status) {
             res.status(err?.status).json(err);
         } else {

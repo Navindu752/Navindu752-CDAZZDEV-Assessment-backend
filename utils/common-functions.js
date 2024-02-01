@@ -16,7 +16,7 @@ const joiErrorFormatter = (rawErrors) => {
 
 const validateInput = (schema, data) => {
   // Validate the input data using the provided schema
-  const validationResult = schema.validate(data, { abortEarly: false });
+  const validationResult = schema(data, { abortEarly: false });
 
   // If there are validation errors, format and return the error message
   if (validationResult.error) {
